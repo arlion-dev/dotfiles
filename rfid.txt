@@ -1,0 +1,69 @@
+#Si on connait au moins une clée :
+
+mfoc -O final.mfd -k a22ae129c013
+
+
+    -k permet de spécifier une clé dont on a connaissance
+    -O permet d’extraire le contenu de la carte dans un fichier
+    -P permet d’augmenter le nombre d’essais sur chaque secteur.
+
+
+#Si aucune clée n'est connue :
+
+mfcuk -C -R 0 -v 3 -s 250 -S 250 -o dump.bin
+
+#Test de clés par defauts:
+
+mfoc -O DumpDeVotrePuceNFC
+
+#Pour retrouver les clés d'un ancien dump :
+
+    mfoc -O DumpDeVotrePuceNFC
+
+    vim DumpDeVotrePuceNFC
+    :%!xxd
+
+modele : clé A (4x3), (4x2), clé B (4x3) 
+
+    mfoc -O MonDump -k CLE_A_1 -k CLE_B_1 -k CLE_B_2
+
+
+
+
+
+8dcb 27d8 b988 0400 468f 4417 6120 4610
+4845 5841 4354 71e7 8800 a22a e129 c013
+4845 5841 4354 70f7 8800 49fa e4e3 849f
+4845 5841 4354 70f7 8800 38fc f330 72e0
+8ad5 517b 4b18
+
+
+
+
+
+
+#SPour extraire les données des cartes :
+
+mfoc -P 500 -O carte-vierge.dmp
+mfoc (k- clé) -P 500 -O carte-a-copier.dmp
+
+nfc-mfclassic w a carte-originale.dmp carte-vierge.dmp
+
+
+#Pour copier le dump sur la carte chinoise:
+
+nfc-mfclassic w a carte_Appart.dmp carte-chinoise_vierge.dmp
+
+	w : pour ecrire aussi l'uid
+	a : utilisation de la clé A
+	b ; utilisation clé b	
+
+#Pour avoir des infos sur le badge:
+
+nfc-list
+
+#Pour modifier l'iud
+
+nfc-mfsetuid 8dcb27d8
+
+Vérifiez que le numéro de série de votre carte chinoise est identique à votre carte.
