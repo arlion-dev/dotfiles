@@ -1,0 +1,12 @@
+#Mise à jour windows 10 sur Dv7
+
+Avec media creator tool créer une clé usb bootable de la nouvelle version.
+
+Mettre en mode de demarrage minimal.
+
+Supprimer pilote carte réseau wifi et les deux cartes graphique.
+
+Enlever physiquement la carte Wi-Fi (Freeze à 81%).
+
+ouvrir le setup une fois la clée créée
+
