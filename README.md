@@ -27,4 +27,30 @@ sudo smartctl -d sat -t long -c /dev/sdc
 sudo badblocks -nvs /dev/sdc
  ```
  
+ ## Wordpress
+ 
+ 
+ 
+ 
+ 
+### Tuto :
+ 
+   [Tuto](https://www.youtube.com/watch?v=2cbvZf1jIJM)
+   
+   [templates Tyler](http://www.tyler.com/)
+   
+   ### Plugins :
+   
+   Elementor
+   OceanWP
+   
+   ### Site:
+   
+   [logomakr](https://logomakr.com/)
+   
+   [Pixabay Images](https://pixabay.com/)
+
+ 
+
+ 
   [ecrire sur github](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
