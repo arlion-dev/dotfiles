@@ -1,4 +1,8 @@
 # **dotfiles**
+## Installation Windows
+
+### Supprimer bloatware
+https://github.com/Sycnex/Windows10Debloater
 
 ## Installation Linux
 
